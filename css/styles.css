@@ -61,7 +61,7 @@ h1, h2, h3, {
 
 .header {
   border-bottom: 1px solid  var(--header-line);
-  padding-top: 0px;
+  padding-top: -1px;
 }
 
 .navigation {
@@ -404,8 +404,13 @@ fill: var(--primary-text-color)
   text-align:justify
 }
 
-.work-list-item {
+.work-list {
   display: flex;
+}
+
+.work-list-item {
+  position: relative;
+
   width: 370px;
   margin-left: 0px;
   margin-right: 30px;
@@ -415,20 +420,53 @@ fill: var(--primary-text-color)
   margin-right: 0px;
 }
 
-.work-list {
-  display: flex;
+.work-action {
+  position: absolute;
+  display:flex;
+
+  align-items: center;
+
+  bottom: 0;
+
+  width: 370px;
+  height: 70px;
+
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
+.work-txt {
+  position: absolute;
+  display: flex;
+
+  margin-right: 82px;
+  margin-left: 82px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  
+  color: var(--primary-light-bg);
+}
+
+
+
 .title {
+  text-align: center;
+
   margin-top: 0px;
   padding-top: 0px;
   margin-bottom: 50px;
+
   font-family: Roboto;
   font-weight: bold;
   font-size: 36px;
+
   line-height: 1.16;
-  text-align: center;
   letter-spacing: 0.03em;
+
   color: var(--secondary-text-color);
 }
 
@@ -589,10 +627,6 @@ border-radius: 0px 0px 4px 4px;
   padding-bottom: 20px;
 }
 
-/* .client-link:focus {
-  fill: var(--accent-text);
-  border: 1px solid var(--accent-text);
-} */
 
 
 
@@ -653,8 +687,6 @@ border-radius: 0px 0px 4px 4px;
 }
 
 .footer-join {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1;
@@ -803,6 +835,7 @@ border-radius: 0px 0px 4px 4px;
 }
 
 .project-item {
+  position: relative;
   box-sizing: border-box;
   margin-top: 0px;
   margin-left: 30px;
@@ -814,6 +847,42 @@ border-radius: 0px 0px 4px 4px;
 
   cursor: pointer;
 }
+
+.overlay-portfolio::before {
+ opacity: 0;
+}
+
+.overlay-portfolio {
+  position: absolute;
+  width: 100%;
+  height: 294px;
+  left: 0px;
+  top: 0px;
+  
+  background: rgba(33, 150, 243, 0.9);
+
+  opacity: 1;
+  translate: translateY (100%);
+  transition: transform 250ms var(--accent-text);
+}
+
+.text-action {
+  position: absolute;
+
+  top: 63px;
+  bottom: 63px;
+  right: 24px;
+  left: 24px;
+
+  margin: 0px;
+  
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  
+  color: var(--primary-light-bg);
+}
+
 
 .project-item:nth-child(3n + 1) {
   margin-left: 0px;

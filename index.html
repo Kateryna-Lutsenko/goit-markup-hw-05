@@ -64,8 +64,8 @@
             <h1 class="hero-title">Эффективные решения </br> для вашего бизнеса</h1>
             <button class="button" type="button" data-modal-open>Заказать услугу</button>
           </div>
-          <div class="backdrop is-hidden">
-            <div class="modal-wrapper" data-modal>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal-wrapper">
               <button class="modal-btn"
               type="button" data-modal-close>x</button>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, magnam.</p>
@@ -134,14 +134,19 @@
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="work-list list">
             <li class="work-list-item">
-              <img
+                <img
                 class="image"
                 src="./images/box/box1.jpg"
                 alt="Декстопные приложения"
                 width="370"
                 height="294"
               />
+
+              <div class="work-action">
+                <P class="work-txt">Десктопные приложения</P>
+              </div>
             </li>
+
             <li class="work-list-item">
               <img
                 class="image"
@@ -150,7 +155,11 @@
                 width="370"
                 height="294"
               />
+              <div class="work-action">
+                <P class="work-txt">Мобильные приложения</P>
+              </div>
             </li>
+
             <li class="work-list-item">
               <img
                 class="image"
@@ -159,6 +168,10 @@
                 width="370"
                 height="294"
               />
+
+              <div class="work-action">
+                <P class="work-txt">Дизайнерские решения</P>
+              </div>
             </li>
           </ul>
         </div>
